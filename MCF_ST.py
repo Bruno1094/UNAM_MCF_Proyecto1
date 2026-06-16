@@ -151,6 +151,9 @@ if ticker:
         # VaR
         VaR_norm = norm.ppf(1 - alpha, mean, stdev)
 
+        st.write("Tamaño de la serie:", len(serie))
+        st.write(serie.head())
+
         df_t, loc_t, scale_t = t.fit(serie.to_numpy())
         VaR_t = t.ppf(1 - alpha, df_t, loc_t, scale_t)
 
