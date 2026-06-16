@@ -142,7 +142,8 @@ if ticker:
             index=0
         )
 
-        serie = df_rend[ticker].dropna()
+        serie = pd.to_numeric(df_rend[ticker], errors="coerce")
+        serie = serie.replace([np.inf, -np.inf], np.nan).dropna()
 
         mean = float(serie.mean())
         stdev = float(serie.std())
@@ -150,7 +151,7 @@ if ticker:
         # VaR
         VaR_norm = norm.ppf(1 - alpha, mean, stdev)
 
-        df_t, loc_t, scale_t = t.fit(serie)
+        df_t, loc_t, scale_t = t.fit(serie.to_numpy())
         VaR_t = t.ppf(1 - alpha, df_t, loc_t, scale_t)
 
         VaR_hist = serie.quantile(1 - alpha)
