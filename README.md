@@ -107,14 +107,15 @@ Por otro lado, el ES cercano a -4.5% muestra que, cuando el rendimiento cae más
 ### Hallazgos importantes:
 - El modelo normal y el histórico tienden a subestimar el riesgo en casos que caen en las colas de la distribución.
 - El modelo t-Student es más conservador.
-- El CVaR siempre es más severo que el VaR, ya que considera la cola completa
+- El CVaR siempre es más severo que el VaR, ya que considera la cola completa.
+
 Esto confirma que los mercados presentan colas pesadas y ciertos riesgos más extremos no despreciables y que la diferencia entre métodos y la elección del modelo impacta directamente la medición del riesgo.
 
 ## 4. Análisis visual de la distribución
 Se construyeron histogramas con:
-- Distribución de rendimientos
-- Líneas de VaR y CVaR para distintos métodos
-- Zona de pérdidas destacada
+- Distribución de rendimientos.
+- Líneas de VaR y CVaR para distintos métodos.
+- Zona de pérdidas destacada.
 
 En la gráfica de distribución se observa que el VaR funciona como un umbral de pérdida, mientras que el ES se ubica más hacia la cola izquierda. Esto es relevante porque el ES no solo identifica cuándo se rebasa un umbral, sino que mide la pérdida promedio en los peores escenarios.
 
@@ -189,8 +190,8 @@ La gráfica muestra que, cuando los rendimientos presentan mayor dispersión, el
 
 ## 8. Violaciones del modelo con volatilidad móvil
 Se evaluó el desempeño del modelo mediante:
-- Número de violaciones
-- Porcentaje de violaciones
+- Número de violaciones.
+- Porcentaje de violaciones.
 
 ### Resultados esperados:
 - Con α = 95% esperariamos aproximadamente un 5% de violaciones.
