@@ -14,6 +14,7 @@ El análisis no se limita a una única metodología, sino que incorpora diferent
 - Simulación Monte Carlo
 - Modelos dinámicos con ventanas móviles (rolling windows)
 - Backtesting para validación de modelos
+
 Este enfoque permite no solo estimar el riesgo, sino también evaluar la robustez y precisión de los modelos utilizados, lo cual es fundamental en contextos financieros reales.
 
 Los datos fueron obtenidos de **Yahoo Finance** utilizando la librería `yfinance`.
